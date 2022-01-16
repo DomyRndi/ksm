@@ -223,7 +223,7 @@ history = model.fit(train_generator,
 
 ###### 取`batch_size=48`,` lr=0.001`，`epochs=20`，对训练之后的模型进行测试，得到结果如下：
 
-<img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211201162221625.png style="zoom: 50%;" />
+<img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211201162221625.png" />
 
 <center><strong>图4 条件1 loss曲线</strong>
 </center>
@@ -231,7 +231,7 @@ history = model.fit(train_generator,
 
 ​	由`loss`曲线可以看出，随着训练迭代次数的加深，验证集上的损失在逐渐的减小，最终稳定在0.2左右；而在训练集上`loss`始终在0附近。
 
-<img src="D:\PHOTO\typora照片\image-20211201162417370.png" alt="image-20211201162417370" style="zoom:67%;" />
+<img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211201162417370.png" />
 
 <center><strong>图5 条件1 acc曲线</strong>
 </center>
@@ -239,7 +239,7 @@ history = model.fit(train_generator,
 
 ​	从验证集和测试集的准确率变化曲线上可以看出，随着训练轮次的增加，验证集的准确率逐渐上升，最终稳定在96%左右，效果还是不错的。
 
-<img src="D:\PHOTO\typora照片\image-20211201162439820.png" alt="image-20211201162439820" style="zoom:67%;" />
+<img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211201162439820.png" />
 
 <center><strong>图6 条件1 测试样例1</strong>
 </center>
@@ -247,7 +247,7 @@ history = model.fit(train_generator,
 
 ​	使用样例照片进行测试，首先人脸识别部分顺利识别到了五张人脸，但是口罩识别部分将一个没有带口罩的人识别成了带着口罩的人，说明还有进步空间，实际错误率达到了20%。
 
-<img src="D:\PHOTO\typora照片\image-20211201162458035.png" alt="image-20211201162458035" style="zoom:67%;" />
+<img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211201162458035.png" />
 
 <center><strong>图7 条件1 测试样例2</strong>
 </center>
@@ -257,7 +257,7 @@ history = model.fit(train_generator,
 
 ###### 平台测试：
 
-![image-20211201164739043](D:\PHOTO\typora照片\image-20211201164739043.png)
+<img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211201164739043.png" />
 
 后续通过调整各项参数并打乱测试集和训练集图片顺序来进行了多次实验，最终确定的最佳状态如下：
 
@@ -265,7 +265,7 @@ history = model.fit(train_generator,
 
 ###### 取`batch_size=64`,` lr=0.0001`，`epochs=20`，对训练之后的模型进行测试，得到结果如下：
 
-<img src="D:\PHOTO\typora照片\image-20211201163128119.png" alt="image-20211201163128119" style="zoom:67%;" />
+<img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211201163128119.png" />
 
 <center><strong>图8 条件2 loss曲线</strong>
 </center>
@@ -273,7 +273,7 @@ history = model.fit(train_generator,
 
 ​	观察准确率曲线可以看出，在该条件下，验证集上的准确率最终稳定在98%附近，效果非常的好，说明我们做出的一些优化还是具有一定效果的。
 
-<img src="D:\PHOTO\typora照片\image-20211201163634817.png" alt="image-20211201163634817" style="zoom:67%;" />
+<img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211201163634817.png" />
 
 <center><strong>图9 条件2 acc曲线</strong>
 </center>
@@ -281,7 +281,7 @@ history = model.fit(train_generator,
 
 ​	观察此条件下的`loss`曲线可以看到最终验证集的`loss`稳定在0.2左右，训练集的`loss`非常小，基本趋近于0
 
-<img src="D:\PHOTO\typora照片\image-20211201163706801.png" alt="image-20211201163706801" style="zoom:67%;" />
+<img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211201163706801.png" />
 
 <center><strong>图10 条件2 测试样例1</strong>
 </center>
@@ -289,7 +289,7 @@ history = model.fit(train_generator,
 
 ​	使用两张测试样例对模型进行检测，第一张图片所有检测点均正确，正确识别出了五张人脸并且口罩佩戴检测均正确，识别正确率100%。
 
-<img src="D:\PHOTO\typora照片\image-20211201163910075.png" alt="image-20211201163910075" style="zoom:67%;" />
+<img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211201163910075.png" />
 
 <center><strong>图11 条件2 测试样例2</strong>
 </center>
@@ -301,7 +301,7 @@ history = model.fit(train_generator,
 
 ###### 平台测试：
 
-![image-20211201164654087](D:\PHOTO\typora照片\image-20211201164654087.png)
+<img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211201164654087.png" />
 
 ##### 条件3：
 
@@ -309,7 +309,7 @@ history = model.fit(train_generator,
 
 ​	在本地使用更多自选图片进行测试，发现人脸识别准确率有所提升。在条件2训练参数不变的情况下，使用同一模型进行平台测试，结果如下：
 
-![image-20211207154521158](D:\PHOTO\typora照片\image-20211207154521158.png)
+<img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211207154521158.png" />
 
 ​	平台测试成绩有所提升。
 
@@ -319,7 +319,7 @@ history = model.fit(train_generator,
 
 ​	平台测试，结果如下：
 
-![image-20211213214137259](D:\PHOTO\typora照片\image-20211213214137259.png)
+<img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211213214137259.png" />
 
 ​	平台测试成绩有所提升，达到95分。
 
