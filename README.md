@@ -47,8 +47,8 @@ from tensorflow.keras.callbacks import ModelCheckpoint, ReduceLROnPlateau, Early
 
 <img src="https://imgbed.momodel.cn/20200918102630.png" width=500px style="zoom:67%;" />
 
-<center><strong>图1 实验口罩佩戴检测流程</strong>
-</center>
+
+<strong>图1 实验口罩佩戴检测流程</strong>
 
 
 ### 二 实验内容
@@ -183,16 +183,15 @@ history = model.fit(train_generator,
 
 <img src="https://imgbed.momodel.cn/20200918102724.png" style="zoom: 50%;" />
 
-<center><strong>图2 MTCNN架构</strong>
-</center>
+<strong>图2 MTCNN架构</strong>
 
 
 #### 3.2 MobileNet
 
 ![img](https://img-blog.csdn.net/20180615124806760?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2MyMDA4MTA1Mg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-<center><strong>图3 MobileNet架构</strong>
-</center>
+<strong>图3 MobileNet架构</strong>
+
 
 
 ​	***MobileNet***的网络结构如图3所示。首先是一个`3x3`的标准卷积，然后后面就是堆积`depthwise separable convolution`，并且可以看到其中的部分`depthwise convolution`会通过`strides=2`进行`down sampling`。然后采用`average pooling`将`feature`变成`1x1`，根据预测类别大小加上全连接层，最后是一个`softmax`层。
@@ -225,32 +224,32 @@ history = model.fit(train_generator,
 
 <img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211201162221625.png" />
 
-<center><strong>图4 条件1 loss曲线</strong>
-</center>
+<strong>图4 条件1 loss曲线</strong>
+
 
 
 ​	由`loss`曲线可以看出，随着训练迭代次数的加深，验证集上的损失在逐渐的减小，最终稳定在0.2左右；而在训练集上`loss`始终在0附近。
 
 <img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211201162417370.png" />
 
-<center><strong>图5 条件1 acc曲线</strong>
-</center>
+<strong>图5 条件1 acc曲线</strong>
+
 
 
 ​	从验证集和测试集的准确率变化曲线上可以看出，随着训练轮次的增加，验证集的准确率逐渐上升，最终稳定在96%左右，效果还是不错的。
 
 <img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211201162439820.png" />
 
-<center><strong>图6 条件1 测试样例1</strong>
-</center>
+<strong>图6 条件1 测试样例1</strong>
+
 
 
 ​	使用样例照片进行测试，首先人脸识别部分顺利识别到了五张人脸，但是口罩识别部分将一个没有带口罩的人识别成了带着口罩的人，说明还有进步空间，实际错误率达到了20%。
 
 <img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211201162458035.png" />
 
-<center><strong>图7 条件1 测试样例2</strong>
-</center>
+<strong>图7 条件1 测试样例2</strong>
+
 
 
 ​	另一张样例照片的测试结果同样是人脸识别部分没有出现问题，正确识别到了四张人脸，但是同样将一个没有带口罩的人识别成了带有口罩的人。
@@ -267,32 +266,32 @@ history = model.fit(train_generator,
 
 <img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211201163128119.png" />
 
-<center><strong>图8 条件2 loss曲线</strong>
-</center>
+<strong>图8 条件2 loss曲线</strong>
+
 
 
 ​	观察准确率曲线可以看出，在该条件下，验证集上的准确率最终稳定在98%附近，效果非常的好，说明我们做出的一些优化还是具有一定效果的。
 
 <img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211201163634817.png" />
 
-<center><strong>图9 条件2 acc曲线</strong>
-</center>
+<strong>图9 条件2 acc曲线</strong>
+
 
 
 ​	观察此条件下的`loss`曲线可以看到最终验证集的`loss`稳定在0.2左右，训练集的`loss`非常小，基本趋近于0
 
 <img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211201163706801.png" />
 
-<center><strong>图10 条件2 测试样例1</strong>
-</center>
+<strong>图10 条件2 测试样例1</strong>
+
 
 
 ​	使用两张测试样例对模型进行检测，第一张图片所有检测点均正确，正确识别出了五张人脸并且口罩佩戴检测均正确，识别正确率100%。
 
 <img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211201163910075.png" />
 
-<center><strong>图11 条件2 测试样例2</strong>
-</center>
+<strong>图11 条件2 测试样例2</strong>
+
 
 
 ​	第二章测试样例上，正确识别出了4张人脸并且口罩佩戴检测结果均正确。
