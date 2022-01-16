@@ -223,7 +223,7 @@ history = model.fit(train_generator,
 
 ###### 取`batch_size=48`,` lr=0.001`，`epochs=20`，对训练之后的模型进行测试，得到结果如下：
 
-<img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211201162221625.png  style="zoom: 50%;" />
+<img src="https://github.com/Antom2000/ZJU-CSE-AI-ML-Mask-recognition/blob/main/PHOTO/image-20211201162221625.png style="zoom: 50%;" />
 
 <center><strong>图4 条件1 loss曲线</strong>
 </center>
