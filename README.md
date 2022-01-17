@@ -1,4 +1,8 @@
 # ZJU-CSE-AI-ML-Mask-recognition
+
+- 资料仅供参考，请勿直接使用或者抄袭！
+- 如果有用，请为我点一颗星，谢谢！
+
 <center><strong><font size="8">口罩佩戴检测
 
 
